@@ -15,3 +15,12 @@ function toBlue() {
         title.style.color = 'blue'
     }
 }
+
+function toGreen() {
+    var title = document.getElementById('title');
+    if (title.style.color == 'green') {
+        title.style.color = 'black';
+    } else {
+        title.style.color = 'green'
+    }
+}
