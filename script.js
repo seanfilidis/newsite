@@ -1,26 +1,12 @@
-function toRed() {
+function changeColor(color) {
     var title = document.getElementById('title');
-    if (title.style.color == 'red') {
+    if (title.style.color == color) {
         title.style.color = 'black';
-    } else {
-        title.style.color = 'red'
-    }
-}
-
-function toBlue() {
-    var title = document.getElementById('title');
-    if (title.style.color == 'blue') {
-        title.style.color = 'black';
-    } else {
-        title.style.color = 'blue'
-    }
-}
-
-function toGreen() {
-    var title = document.getElementById('title');
-    if (title.style.color == 'green') {
-        title.style.color = 'black';
-    } else {
-        title.style.color = 'green'
+    } else if (color == 'red') {
+        title.style.color = 'red';
+    } else if (color == 'blue') {
+        title.style.color = 'blue';
+    } else if (color == 'green') {
+        title.style.color = 'green';
     }
 }
