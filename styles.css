@@ -195,11 +195,10 @@ a:hover {
 .video-foreground, .video-background iframe {
     position: fixed;
     top: 0;
-    left: 0;
     min-width: 100%;
     min-height: 100%;
     pointer-events: none; 
-    overflow: hidden
+    overflow: hidden;
     display: flex;
-    z-index: -1;
+    z-index: -10;
 }
