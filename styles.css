@@ -11,7 +11,38 @@ body {
     color: #000;
     font-family: "Work Sans";
 }
-.full-height-outer {
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color:;
+    z-index: 20;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: space-around;
+}
+nav li {
+    display: inline;
+    min-width: 200px;
+}
+.nav-transparent {
+    background-color: ;
+    transition: background-color 300ms linear;
+}
+.nav-colored {
+    background-color: rgb(228, 228, 228);
+    border-bottom: 1px solid #d2d2d2;
+    transition: background-color 300ms linear;
+}
+.full-height {
     display: flex;
     align-items: center;
     height: 100%;
@@ -142,12 +173,15 @@ a:hover {
 
 .red h1, .red h2, .red h3, .red h4, .red h5, .red h6 {
     color: rgb(83, 0, 0);
+    transition: color 1000ms linear;
 }
 .red p {
     color: rgb(134, 0, 0);
+    transition: color 1000ms linear;
 }
 .red .button, .red a {
     color: red;
+    transition: color 1000ms linear;
 }
 .blue {
     background-color: rgb(198, 191, 255);
@@ -155,12 +189,15 @@ a:hover {
 
 .blue h1, .blue h2, .blue h3, .blue h4, .blue h5, .blue h6 {
     color: rgb(31, 0, 168);
+    transition: color 1000ms linear;
 }
 .blue p {
     color: rgb(58, 0, 165);
+    transition: color 1000ms linear;
 }
 .blue .button, .blue a {
     color: blue;
+    transition: color 1000ms linear;
 }
 .green {
     background-color: rgb(210, 255, 217);
@@ -168,12 +205,15 @@ a:hover {
 
 .green h1, .green h2, .green h3, .green h4, .green h5, .green h6 {
     color: rgb(0, 70, 6);
+    transition: color 1000ms linear;
 }
 .green p {
     color: rgb(0, 99, 0);
+    transition: color 1000ms linear;
 }
 .green .button, .green a {
     color: green;
+    transition: color 1000ms linear;
 }
 
 .video-foreground, .video-background iframe {
