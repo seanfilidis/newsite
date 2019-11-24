@@ -24,3 +24,15 @@ function scrolllTo(number) {
         block: 'start'
     });
 }
+
+document.addEventListener("scroll", navBg);
+
+function navBg() {
+    var depth = window.pageYOffset;
+    var navcolor = document.getElementById("topnav");
+    if (depth < 2) {
+        navcolor.className = 'nav-transparent';
+    } else {
+        navcolor.className = 'nav-colored';
+    }
+}
