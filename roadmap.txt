@@ -1,9 +1,11 @@
 gRoadmap
 
-1. Make toggles change entire color scheme using for loops if possible
+1. Make toggles change entire color scheme using for loops if possible X
 
-2. Full-height hero with background video
+2. Full-height hero with background video X
 
-3. Sticky top-nav that's transparent at first
+3. Sticky top-nav that's transparent at first X
+
+3a. Implement flex shrink
 
 4. Make it all responsive
