@@ -194,11 +194,14 @@ a:hover {
 
 .video-foreground, .video-background iframe {
     position: fixed;
-    top: 0;
+    top: -60px;
     min-width: 100%;
     min-height: 100%;
     pointer-events: none; 
     overflow: hidden;
     display: flex;
     z-index: -10;
+    -webkit-transition: 2s opacity ease;
+    transition: 2s opacity ease;
+    opacity: 1;
 }
