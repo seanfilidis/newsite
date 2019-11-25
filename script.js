@@ -26,11 +26,14 @@ function navBg() {
     var depth = window.pageYOffset;
     var navcolor = document.getElementById("topnav");
     var trans = document.getElementById('transparent');
+    var scrollIndicator = document.getElementById('scroll-indicator');
     if (depth < 2) {
         navcolor.className = 'nav-transparent';
         trans.innerHTML = 'Transparent';
+        scrollIndicator.style.opacity = 1;
     } else {
         navcolor.className = 'nav-colored';
         trans.innerHTML = 'Opaque';
+        scrollIndicator.style.opacity = 0;
     }
 }
