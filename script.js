@@ -1,15 +1,4 @@
 function changeColor(color) {
-    /* this function changes just the title, could be made simpler
-    var title = document.getElementById('title');
-    if (color == 'black') {
-        title.style.color = 'black';
-    } else if (color == 'red') {
-        title.style.color = 'red';
-    } else if (color == 'blue') {
-        title.style.color = 'blue';
-    } else if (color == 'green') {
-        title.style.color = 'green';
-    }*/
     var myBody = document.getElementsByTagName("body");
     if (color == 'black') {
         myBody[0].className = '';
@@ -19,9 +8,15 @@ function changeColor(color) {
 }
 
 function scrolllTo(number) {
-    document.getElementById(number).scrollIntoView({
+    var headerOffset = 55;
+    var target = document.getElementById(number);
+    var bodyRect = document.body.getBoundingClientRect().top;
+    var targetRect = target.getBoundingClientRect().top;
+    var targetPosition = targetRect - bodyRect;
+    var offsetPosition = targetPosition - headerOffset;
+    window.scrollTo({
         behavior: 'smooth',
-        block: 'start'
+        top: offsetPosition
     });
 }
 
@@ -30,9 +25,12 @@ document.addEventListener("scroll", navBg);
 function navBg() {
     var depth = window.pageYOffset;
     var navcolor = document.getElementById("topnav");
+    var trans = document.getElementById('transparent');
     if (depth < 2) {
         navcolor.className = 'nav-transparent';
+        trans.innerHTML = 'Transparent';
     } else {
         navcolor.className = 'nav-colored';
+        trans.innerHTML = 'Opaque';
     }
 }
