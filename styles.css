@@ -22,7 +22,7 @@ nav {
 }
 nav ul {
     display: flex;
-    justify-content: center;
+    width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -30,8 +30,7 @@ nav ul {
     justify-content: space-around;
 }
 nav li {
-    display: inline;
-    min-width: 200px;
+    
 }
 .nav-transparent {
     background-color: ;
@@ -165,6 +164,7 @@ a:hover {
     margin-left: 25px;
     padding: 0 25px;
     box-sizing: border-box;
+    flex-shrink: 8;
 }
 
 .red {

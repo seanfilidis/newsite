@@ -6,6 +6,12 @@ gRoadmap
 
 3. Sticky top-nav that's transparent at first X
 
-3a. Implement flex shrink
+3a. Implement flex shrink X
 
-4. Make it all responsive
+4. Make a scroll down indicator
+
+5. Add a logo to the top nav
+
+6. Hamburger menu
+
+7. Make it all responsive
