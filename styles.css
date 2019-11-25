@@ -246,3 +246,11 @@ a:hover {
     transition: .5s opacity ease;
     cursor: pointer;
 }
+
+#back-to-top {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+    display: none;
+}
