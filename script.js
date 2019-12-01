@@ -49,4 +49,4 @@ function navBg() { // Does stuff depending how far down the page you scroll
 
 requestAnimationFrame(navBg); // Browser optimized way
 
-var scrolling = window.requestAnimationFrame;
+var elemsToFadeIn = document.querySelectorAll('show-on-scroll');
