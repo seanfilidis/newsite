@@ -44,9 +44,38 @@ function navBg() { // Does stuff depending how far down the page you scroll
     }
     requestAnimationFrame(navBg);
 }
-
 // document.addEventListener("scroll", navBg); // Old way
+requestAnimationFrame(navBg); // Browser optimized way to call navBG
 
-requestAnimationFrame(navBg); // Browser optimized way
 
-var elemsToFadeIn = document.querySelectorAll('show-on-scroll');
+var scrolling = window.requestAnimationFrame;
+
+var elemsToFadeIn = document.querySelectorAll('.show-on-scroll'); // creates an array
+
+elemsToFadeIn.forEach(myFunction); // runs myFunction on every array item
+
+function myFunction(item) {
+    if (isElementInViewport(item)) {
+        item.classList.add('is-visible');
+        item.style.color = "red";
+    } else {
+        item.classList.remove('is-visible');
+    }
+    scrolling(myFunction);
+}
+
+
+
+function isElementInViewport(el) { //don't understand this yet
+    var rect = el.getBoundingClientRect();
+    return (
+      (rect.top <= 0
+        && rect.bottom >= 0)
+      ||
+      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+      ||
+      (rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    );
+  }

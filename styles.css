@@ -264,4 +264,5 @@ a:hover {
 
 .show-on-scroll.is-visible {
     opacity: 1;
+    transition: .5s opacity ease;
 }
