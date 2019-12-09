@@ -50,7 +50,7 @@ requestAnimationFrame(navBg); // Browser optimized way to call navBG
 
 var scrolling = window.requestAnimationFrame;
 
-var elemsToFadeIn = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p'); // creates an array
+var elemsToFadeIn = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li'); // creates an array
 
 
 function myFunction() {

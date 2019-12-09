@@ -256,13 +256,16 @@ a:hover {
     display: none;
 }
 
-.h1, h2, h3, h4, h5, h6, p {
+.h1, h2, h3, h4, h5, h6, p, li {
+    transition: all 1s;
     opacity: 0;
-    transition: 1.5s opacity ease;
-    will-change: transition, opacity;
+    transform: translate(0,20px);
+    will-change: transform, opacity;
+    
 }
 
 .is-visible {
+    transition: all 1s;
     opacity: 1;
-    transition: 1.5s opacity ease;
+    transform: translate(0,0);
 }
