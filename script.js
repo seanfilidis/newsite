@@ -7,7 +7,7 @@ function changeColor(color) {
     }
 }
 
-function scrolllTo(number) { // Scrolls to a location taking into account the sticky header
+function scrolllTo(number) { // Scrolls on click taking into account the sticky top nav offset
     var headerOffset = 55;
     var target = document.getElementById(number);
     var bodyRect = document.body.getBoundingClientRect().top;
@@ -20,7 +20,7 @@ function scrolllTo(number) { // Scrolls to a location taking into account the st
     });
 }
 
-document.addEventListener("scroll", navBg);
+
 
 function navBg() { // Does stuff depending how far down the page you scroll
     var depth = window.pageYOffset;
@@ -42,4 +42,42 @@ function navBg() { // Does stuff depending how far down the page you scroll
     } else {
         backToTop.style.display = 'inline';
     }
+    requestAnimationFrame(navBg);
 }
+// document.addEventListener("scroll", navBg); // Old way
+requestAnimationFrame(navBg); // Browser optimized way to call navBG
+
+
+var scrolling = window.requestAnimationFrame;
+
+var elemsToFadeIn = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li'); // creates an array
+
+
+function myFunction() {
+    elemsToFadeIn.forEach(function (item) { // runs myFunction on every array item
+
+        if (isElementInViewport(item)) {
+            item.classList.add('is-visible');
+        } else {
+            item.classList.remove('is-visible');
+        }
+        
+    });
+    scrolling(myFunction);
+}
+
+myFunction();
+
+function isElementInViewport(el) { //don't understand this yet
+    var rect = el.getBoundingClientRect();
+    return (
+      (rect.top <= 0
+        && rect.bottom >= 0)
+      ||
+      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+      ||
+      (rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    );
+  }

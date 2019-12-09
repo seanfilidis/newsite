@@ -245,6 +245,7 @@ a:hover {
     opacity: 1;
     transition: .5s opacity ease;
     cursor: pointer;
+    will-change: opacity;
 }
 
 #back-to-top {
@@ -253,4 +254,18 @@ a:hover {
     right: 5px;
     cursor: pointer;
     display: none;
+}
+
+.h1, h2, h3, h4, h5, h6, p, li {
+    transition: all 1s;
+    opacity: 0;
+    transform: translate(0,20px);
+    will-change: transform, opacity;
+    
+}
+
+.is-visible {
+    transition: all 1s;
+    opacity: 1;
+    transform: translate(0,0);
 }
