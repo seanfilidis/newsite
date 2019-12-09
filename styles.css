@@ -256,13 +256,13 @@ a:hover {
     display: none;
 }
 
-.show-on-scroll {
+.h1, h2, h3, h4, h5, h6, p {
     opacity: 0;
-    transition: .5s opacity ease;
+    transition: 1.5s opacity ease;
     will-change: transition, opacity;
 }
 
-.show-on-scroll.is-visible {
+.is-visible {
     opacity: 1;
-    transition: .5s opacity ease;
+    transition: 1.5s opacity ease;
 }

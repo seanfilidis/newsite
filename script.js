@@ -50,21 +50,23 @@ requestAnimationFrame(navBg); // Browser optimized way to call navBG
 
 var scrolling = window.requestAnimationFrame;
 
-var elemsToFadeIn = document.querySelectorAll('.show-on-scroll'); // creates an array
+var elemsToFadeIn = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p'); // creates an array
 
-elemsToFadeIn.forEach(myFunction); // runs myFunction on every array item
 
-function myFunction(item) {
-    if (isElementInViewport(item)) {
-        item.classList.add('is-visible');
-        item.style.color = "red";
-    } else {
-        item.classList.remove('is-visible');
-    }
+function myFunction() {
+    elemsToFadeIn.forEach(function (item) { // runs myFunction on every array item
+
+        if (isElementInViewport(item)) {
+            item.classList.add('is-visible');
+        } else {
+            item.classList.remove('is-visible');
+        }
+        
+    });
     scrolling(myFunction);
 }
 
-
+myFunction();
 
 function isElementInViewport(el) { //don't understand this yet
     var rect = el.getBoundingClientRect();
