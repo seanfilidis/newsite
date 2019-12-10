@@ -1,5 +1,13 @@
-function changeColor(color) { // Color toggle
-    var myBody = document.getElementsByTagName("body");
+// Color toggle
+document.querySelectorAll('.button').forEach(item => { // No need for onClick events
+    item.addEventListener('click', event => {
+        var color = item.id;
+        console.log(color);
+        changeColor(color);
+    });
+});
+function changeColor(color) { 
+    var myBody = document.getElementsByTagName("body"); // Changes the colors
     if (color == 'black') {
         myBody[0].className = '';
     } else {
@@ -7,7 +15,9 @@ function changeColor(color) { // Color toggle
     }
 }
 
-document.querySelectorAll('.smooth-scroll').forEach(item => {
+
+// Smooth scroll
+document.querySelectorAll('.smooth-scroll').forEach(item => { // No need for onClick events
     item.addEventListener('click', event => {
         event.preventDefault();
         var regex = /#([^#,.+]*)/gm;
@@ -18,8 +28,6 @@ document.querySelectorAll('.smooth-scroll').forEach(item => {
         scrolllTo(result);
     });
 });
-
-
 function scrolllTo(number) { // Scrolls on click taking into account the sticky top nav offset
     var headerOffset = 55;
     var target = document.getElementById(number);
@@ -34,8 +42,8 @@ function scrolllTo(number) { // Scrolls on click taking into account the sticky 
 }
 
 
-
-function navBg() { // Transparent topnav, scroll indicator, back to top button
+// Transparent topnav, scroll indicator, back to top button
+function navBg() { 
     var depth = window.pageYOffset;
     var navcolor = document.getElementById("topnav");
     var trans = document.getElementById('transparent');
@@ -59,7 +67,6 @@ function navBg() { // Transparent topnav, scroll indicator, back to top button
 }
 // Old way: document.addEventListener("scroll", navBg); 
 requestAnimationFrame(navBg); // Browser optimized way to call navBG
-
 
 
 // This block handles animations on page elements
