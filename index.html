@@ -10,8 +10,8 @@ https://www.seanfilidis.com
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css?v=1.0">
-        
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="color-toggle.css">
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900|Work+Sans:400,700&display=swap" rel="stylesheet">
         <title>A website</title>
         <meta name="description" content="This is just a regular website">
@@ -41,15 +41,15 @@ https://www.seanfilidis.com
                 <div class="sidebar">
                     <h5 class="sidebar-title">My sticky sidebar</h5>
                     <ul>
-                        <li><a onclick="scrolllTo('one')">Smooth scroll 1</a></li>
-                        <li><a onclick="scrolllTo('two')">Smooth scroll 2</a></li>
-                        <li><a onclick="scrolllTo('three')">Smooth scroll 3</a></li>
-                        <li><a onclick="scrolllTo('four')">Smooth scroll 4</a></li>
-                        <li><a onclick="scrolllTo('five')">Smooth scroll 5</a></li>
-                        <p onclick="changeColor('red')" class="button">Red toggle</p>
-                        <p onclick="changeColor('blue')" class="button">Blue toggle</p>
-                        <p onclick="changeColor('green')" class="button">Green toggle</p>
-                        <p onclick="changeColor('black')" class="button">Reset</p>
+                        <li><a href="#one" class="smooth-scroll">Smooth scroll 1</a></li>
+                        <li><a href="#two" class="smooth-scroll">Smooth scroll 2</a></li>
+                        <li><a href="#three" class="smooth-scroll">Smooth scroll 3</a></li>
+                        <li><a href="#four" class="smooth-scroll">Smooth scroll 4</a></li>
+                        <li><a href="#five" class="smooth-scroll">Smooth scroll 5</a></li>
+                        <p id="red" class="button">Red toggle</p>
+                        <p id="blue" class="button">Blue toggle</p>
+                        <p id="green" class="button">Green toggle</p>
+                        <p id="black" class="button">Reset</p>
                     </ul>
                 </div>
                 <div class="main-content">
