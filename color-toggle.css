@@ -1,0 +1,18 @@
+
+.red h1, .red h2, .red h3, .red h4, .red h5, .red h6, .red p, .red a, .red .button {
+    color: rgb(83, 0, 0);
+    transition: all 1s;
+}
+
+
+
+.blue h1, .blue h2, .blue h3, .blue h4, .blue h5, .blue h6, .blue p, .blue a, .blue .button {
+    color: rgb(31, 0, 168);
+    transition: all 1s;
+}
+
+
+.green h1, .green h2, .green h3, .green h4, .green h5, .green h6, .green p, .green a, .green .button {
+    color: rgb(0, 70, 6);
+    transition: all 1s;
+}
