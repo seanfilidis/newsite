@@ -23,7 +23,7 @@ document.querySelectorAll('.smooth-scroll').forEach(item => { // No need for onC
         var regex = /#([^#,.+]*)/gm;
         var href = item.getAttribute('href');
         var subs = '$1';
-        result = href.replace(regex, subs);
+        var result = href.replace(regex, subs);
         console.log(result);
         scrolllTo(result);
     });
