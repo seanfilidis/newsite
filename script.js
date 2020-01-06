@@ -15,6 +15,9 @@ function changeColor(color) {
     }
 }
 
+document.getElementById('menu-button').addEventListener('click', event => {
+    document.getElementById('mobilenav').classList.toggle("hide");
+});
 
 // Smooth scroll
 document.querySelectorAll('.smooth-scroll').forEach(item => { // No need for onClick events
@@ -29,12 +32,13 @@ document.querySelectorAll('.smooth-scroll').forEach(item => { // No need for onC
     });
 });
 function scrolllTo(number) { // Scrolls on click taking into account the sticky top nav offset
-    var headerOffset = 55;
+    var headerOffset = 65;
     var target = document.getElementById(number);
     var bodyRect = document.body.getBoundingClientRect().top;
     var targetRect = target.getBoundingClientRect().top;
     var targetPosition = targetRect - bodyRect;
     var offsetPosition = targetPosition - headerOffset;
+    document.getElementById('mobilenav').className = 'hide';
     window.scrollTo({
         behavior: 'smooth',
         top: offsetPosition
