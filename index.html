@@ -18,13 +18,24 @@ https://www.seanfilidis.com
     </head>
     <body id="body">
         <div id="back-to-top"><a onclick="scrolllTo('body')">Back to top &#8593;</a></div>
-        <nav id="topnav">
+        
+        <nav id="mobilenav" class="hide">
             <ul>
-                <li><a>My Sticky</a></li>
-                <li><a id="transparent">Transparent</a></li>
-                <li><a>Flexbox</a></li>
-                <li><a>Topnav</a></li>
-                <li><a>With Scroll Offset</a></li>
+                <li><a href="#one" class="smooth-scroll">My Sticky</a></li>
+                <li><a href="#two" class="smooth-scroll">Transparent</a href="#one" class="smooth-scroll"></li>
+                <li><a href="#three" class="smooth-scroll">Flexbox</a href="#one" class="smooth-scroll"></li>
+                <li><a href="#four" class="smooth-scroll">Topnav</a href="#one" class="smooth-scroll"></li>
+                <li><a href="#five" class="smooth-scroll">With Scroll Offset</a href="#one" class="smooth-scroll"></li>
+            </ul>
+        </nav>
+        <div id="menu-button" class="menu-button"><img src="menu-button.svg" class="menu-button-img"></div>
+        <nav id="topnav" class="show-on-large">
+            <ul>
+                <li><a href="#one" class="smooth-scroll">My Sticky</a></li>
+                <li><a href="#two" class="smooth-scroll" id="transparent">Transparent</a href="#one" class="smooth-scroll"></li>
+                <li><a href="#three" class="smooth-scroll">Flexbox</a href="#one" class="smooth-scroll"></li>
+                <li><a href="#four" class="smooth-scroll">Topnav</a href="#one" class="smooth-scroll"></li>
+                <li><a href="#five" class="smooth-scroll">With Scroll Offset</a href="#one" class="smooth-scroll"></li>
             </ul>
         </nav>    
         <section class="full-height home-banner loading" id="home-banner-box">
