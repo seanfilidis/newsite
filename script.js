@@ -40,6 +40,7 @@ function scrolllTo(number) { // Scrolls on click taking into account the sticky 
     var targetPosition = targetRect - bodyRect;
     var offsetPosition = targetPosition - headerOffset;
     document.getElementById('mobilenav').className = 'hide';
+    document.getElementById('hamburger').classList.remove('is-active');
     window.scrollTo({
         behavior: 'smooth',
         top: offsetPosition
