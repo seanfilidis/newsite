@@ -17,6 +17,7 @@ function changeColor(color) {
 
 document.getElementById('menu-button').addEventListener('click', event => {
     document.getElementById('mobilenav').classList.toggle("hide");
+    document.getElementById('hamburger').classList.toggle('is-active');
 });
 
 // Smooth scroll
@@ -47,20 +48,25 @@ function scrolllTo(number) { // Scrolls on click taking into account the sticky 
 
 
 // Transparent topnav, scroll indicator, back to top button
+var navcolor = document.getElementById("topnav");
+var trans = document.getElementById('transparent');
+var scrollIndicator = document.getElementById('scroll-indicator');
+var backToTop = document.getElementById('back-to-top');
+var hamburgerButton = document.getElementById('menu-button');
+var hamInner = document.getElementById('haminner');
 function navBg() { 
     var depth = window.pageYOffset;
-    var navcolor = document.getElementById("topnav");
-    var trans = document.getElementById('transparent');
-    var scrollIndicator = document.getElementById('scroll-indicator');
-    var backToTop = document.getElementById('back-to-top');
+
     if (depth < 2) {
         navcolor.className = 'nav-transparent';
         trans.innerHTML = 'Transparent';
         scrollIndicator.style.opacity = 1;
+        hamburgerButton.style.backgroundColor = 'transparent';
     } else {
         navcolor.className = 'nav-colored';
         trans.innerHTML = 'Opaque';
         scrollIndicator.style.opacity = 0;
+        hamburgerButton.style.backgroundColor = 'rgba(0,0,0,0.5)';
     }
     if (depth < 650) {
         backToTop.style.display = 'none';

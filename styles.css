@@ -238,9 +238,9 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.5);
     z-index: 99;
     cursor: pointer;
+    transition: all .5s;
 }
 .menu-button-img {
     height: 30px;
@@ -308,4 +308,18 @@ a:hover {
         margin-top: 10px;
         height: 30px;
     }
+}
+button.hamburger {
+    padding: 0;
+}
+button.hamburger:focus {
+    outline:0;
+}
+span.hamburger-box {
+    position: static;
+    width: 35px;
+}
+#haminner, #haminner:before, #haminner:after {
+    background-color: white;
+    width: 35px;
 }
